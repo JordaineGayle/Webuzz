@@ -14,7 +14,7 @@
                     <q-tab-panel name="chats" class="q-pa-none">
                         <q-list bordered class="rounded-borders " >
                             <div v-for="n in 6" :key="n">
-                                <q-item  to="/main/chat" clickable v-ripple>
+                                <q-item to="/main/chat" clickable v-ripple>
                                     <q-item-section avatar>
                                     <q-avatar>
                                         <img :src="'https://cdn.quasar.dev/img/avatar'+n+'.jpg'">

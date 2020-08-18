@@ -23,9 +23,15 @@
                 </q-route-tab>
             </q-tabs>
             <div v-else class="row justify-center q-pa-none">
-                <div class="col-12 col-lg-4 q-pa-none">
-                    <q-input bottom-slots class="q-pa-none q-pl-lg q-pr-lg"  color="deep-purple-8" borderless autogrow v-model="message" placeholder="Enter Message">
+                <input id="fileInput" type="file" style="display:none;" multiple/>
+                <div class="col-12 q-pa-none col-lg-8 col-md-10">
+                    <q-input bottom-slots class="q-pa-none"  color="deep-purple-8" borderless autogrow v-model="message" placeholder="Enter Message">
                         
+                        <template v-slot:before>
+                            
+                            <q-btn @click="() => openFile()" dense size="lg" flat icon="attach_file" />
+                        </template>
+
                         <template v-slot:after>
                             <q-btn @click="() => message = ''" dense size="lg" flat icon="send" />
                         </template>
@@ -60,6 +66,12 @@ export default {
                 {name:'Profile',icon:'account_circle',alert:''}
             ],
             message: ''
+        }
+    },
+    methods:{
+        openFile: function(){
+            console.log("open cus");
+            document.getElementById('fileInput').click();
         }
     },
     computed: {

@@ -1,12 +1,10 @@
 <template>
-    <div class="column justify-center q-pa-none q-gutter-md">
-        <div class="row justify-center">
-            <div  class="shadow-2 bg-grey-2 col-12 col-lg-4 col-md-6 q-pa-lg">
-                <div style="height:auto;" v-for="n in 10" :key="n">
+    <div class="window-height column q-pa-none">
+        <div class="full-height row justify-center q-gutter-md">
+            <div  class="bg-grey-2 col-12 col-lg-8 col-md-10 q-pa-lg">
+                <div class="q-mb-xl" v-for="n in 10" :key="n">
                     <q-chat-message
-                    v-for="n in 2" :key="n"
                     name="me"
-                    
                     avatar="https://cdn.quasar.dev/img/avatar1.jpg"
                     :text="['hey, how are you?']"
                     sent
