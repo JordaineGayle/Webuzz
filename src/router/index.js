@@ -34,8 +34,8 @@ const routes = [
     //beforeEnter: guardMyroute,
     children: [
       {
-        path: "/main/home",
-        name: "Home",
+        path: "/main/homepage",
+        name: "Homepage",
         icon:'home',
         component: () =>
           import(/* webpackChunkName: "home-screen" */ "../views/screens/Home.vue")
@@ -78,7 +78,6 @@ const routes = [
       {
         path: "/main/status",
         name: "Status",
-        icon:'account_circle',
         component: () =>
           import(/* webpackChunkName: "status" */ "../views/screens/Status.vue")
       },
